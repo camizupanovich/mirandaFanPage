@@ -1,0 +1,22 @@
+.box{
+    background-color: #48C9B0;
+    color: white;
+    margin: 2vw;
+    width: 16vw;
+    height: 16vw;
+    font-size: xx-large;
+    border-radius: 50%;
+    font-family: 'Knewave', cursive;
+    box-shadow: 1px 3px 10px rgb(53, 53, 53);
+    text-shadow:1px 2px  rgb(53, 53, 53);
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+}
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
