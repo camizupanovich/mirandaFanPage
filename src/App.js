@@ -7,7 +7,7 @@ function App() {
     let [minutos,setMinutos]= useState(0)
     let [segundos,setSegundos]= useState(0)
     useEffect(() => {
-        const fechaConcierto = new Date('Oct 4, 2023 00:00:00').getTime();
+        const fechaConcierto = new Date('Oct 4, 2023 21:00:00').getTime();
         let interval = setInterval(function () {
             const now = new Date().getTime();
             let distance = fechaConcierto - now;

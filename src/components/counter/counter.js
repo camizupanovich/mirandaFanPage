@@ -1,13 +1,39 @@
 import React from "react";
 import "./counter.css"
 
-export default function Counter({minutos, segundos, dias,horas}) {
-  return (
-    <div className="container">
-      {dias>0 ? <p className="box center">{dias} dias</p> : null}
-      {horas>0 ? <p className="box center">{horas} horas</p> : null}
-      {minutos===0 && horas!==0? <p className="box center">00</p> : <p className="box center">{minutos} minutos</p>}
-      <p className="box center">{segundos} segundos</p>
+export default function Counter({ minutos, segundos, dias, horas }) {
+  if (horas < 10) {
+    horas = '0' + (horas)
+  }
+  if (minutos < 10) {
+    minutos = '0' + (minutos)
+  }
+  if (segundos < 10) {
+    segundos = '0' + (segundos)
+  }
+  return (<>
+  <img src=""/>
+    <div className="dias">
+      <span className="monoton">Faltan </span> <span className="number"> {dias} </span><span className="monoton"> Días</span>
     </div>
+    <div className="container">
+      <div className="item">
+        <div className="time">{horas}</div>
+        <div className="timeText">Horas</div>
+      </div>
+      <div className="points">:</div>
+      <div className="item">
+        <div className="time">{minutos}</div>
+        <div className="timeText">Minutos</div>
+      </div>
+      <div className="points">:</div>
+      <div className="item">
+        <div className="time">{segundos}</div>
+        <div className="timeText">Segundos</div>
+      </div>
+    </div>
+    
+    
+    </>
   );
 }
