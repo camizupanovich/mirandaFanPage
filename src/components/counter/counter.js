@@ -1,4 +1,6 @@
 import React from "react";
+import img from '../../assets/icon.svg'
+import vinilo from '../../assets/vinilo.svg'
 import "./counter.css"
 
 export default function Counter({ minutos, segundos, dias, horas }) {
@@ -12,9 +14,12 @@ export default function Counter({ minutos, segundos, dias, horas }) {
     segundos = '0' + (segundos)
   }
   return (<>
-  <img src=""/>
-    <div className="dias">
-      <span className="monoton">Faltan </span> <span className="number"> {dias} </span><span className="monoton"> Días</span>
+    <img src={vinilo} className="vinilo" />
+    <img src={img} className="icon" />
+    <div className="parent">
+      <div className="dias">
+        <span className="monoton">Faltan </span> <span className="number"> {dias} </span><span className="monoton"> Días</span>
+      </div>
     </div>
     <div className="container">
       <div className="item">
@@ -32,8 +37,8 @@ export default function Counter({ minutos, segundos, dias, horas }) {
         <div className="timeText">Segundos</div>
       </div>
     </div>
-    
-    
-    </>
+
+
+  </>
   );
 }
