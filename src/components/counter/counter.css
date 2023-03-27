@@ -136,7 +136,6 @@
     }
 
 }
-
 .monoton {
     font-family: 'Monoton', cursive;
 
@@ -146,22 +145,42 @@
     color: #FF618E;
     font-family: 'Knewave', cursive;
 }
+.disco{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 19vw;
+    height:19vw;;
+    top: 5vh;
+    left: 7vw;
+    z-index: 999998;
+
+}
 .vinilo{
     position: absolute;
     width: 19vw;
-    top: 2vh;
-    left: 8vw;
-    z-index: 999998;
+    animation: vini linear 3000ms infinite;
+}
+@keyframes vini {
+
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 
 }
 .icon {
     position: absolute;
-    width: 13vw;
-    top: 8vh;
-    left: 11vw;
-    z-index: 999999;
-    border-radius: 50%;
-    box-shadow: 5px 5px 0px black;
+    width: 9vw;
 }
 @media screen and (max-width:700px) {
     .icon {

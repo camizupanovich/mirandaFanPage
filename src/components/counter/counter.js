@@ -14,8 +14,10 @@ export default function Counter({ minutos, segundos, dias, horas }) {
     segundos = '0' + (segundos)
   }
   return (<>
+  <div className="disco">
     <img src={vinilo} className="vinilo" />
     <img src={img} className="icon" />
+    </div>
     <div className="parent">
       <div className="dias">
         <span className="monoton">Faltan </span> <span className="number"> {dias} </span><span className="monoton"> Días</span>
