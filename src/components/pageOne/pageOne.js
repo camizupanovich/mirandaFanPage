@@ -37,9 +37,9 @@ export default function PageOne({ minutos, segundos, dias, horas, day, place }) 
     </div>
     <div className="containerCartel">
       <div className="cartel">
-        <div style={{ color: '#FF618E', textShadow: '0px 0px 5px black', fontSize: '25px', height: 'auto' }}>{day}</div>
-        <div style={{ color: '#FF618E', textShadow: '0px 0px 5px black', fontSize: '33px', height: 'auto' }}>MIRANDA!</div>
-        <div style={{ color: '#FF618E', textShadow: '0px 0px 5px black', fontSize: '20px', height: 'auto' }}>{place}</div>
+        <div className='text-day'>{day}</div>
+        <div className='text-band'>MIRANDA!</div>
+        <div className='text-place'>{place}</div>
       </div>
     </div>
     <div className="containerDisc">

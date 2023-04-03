@@ -206,6 +206,7 @@
     align-items: center;
     padding: 20px;
     box-shadow: 0px 0px 5px black;
+    transform: rotate(-10deg);
 }
 
 .containerCartel {
@@ -218,11 +219,13 @@
 }
 
 .btnContainer {
+    position: absolute;
+    bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 10vh;
+    height: 15vh;
 
 }
 
@@ -234,8 +237,31 @@
     border: none;
     outline: none;
 }
-
+.text-day{
+    color: #FF618E;
+    text-shadow: 0px 0px 5px black;
+    font-size: 36px;
+}
+.text-band{
+    color: #FF618E;
+    text-shadow: 0px 0px 5px black;
+    font-size: 52px;
+}
+.text-place{
+    color: #FF618E;
+    text-shadow: 0px 0px 5px black;
+    font-size: 30px;
+}
 @media screen and (max-width:500px) {
+    .text-day{
+        font-size: 25px;
+    }
+    .text-band{
+        font-size: 33px;
+    }
+    .text-place{
+        font-size: 20px;
+    }
     .containerDisc {
         position: relative;
         display: flex;
@@ -270,5 +296,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        transform: rotate(0deg);
+    }
+    .btnContainer{
+        position: relative;
+        height: 10vh;
     }
 }
