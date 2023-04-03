@@ -1,9 +1,9 @@
 import React from "react";
 import img from '../../assets/icon.svg'
 import vinilo from '../../assets/vinilo.svg'
-import "./counter.css"
+import "./pageOne.css"
 
-export default function Counter({ minutos, segundos, dias, horas }) {
+export default function PageOne({ minutos, segundos, dias, horas, day, place }) {
   if (horas < 10) {
     horas = '0' + (horas)
   }
@@ -14,10 +14,6 @@ export default function Counter({ minutos, segundos, dias, horas }) {
     segundos = '0' + (segundos)
   }
   return (<>
-  <div className="disco">
-    <img src={vinilo} className="vinilo" />
-    <img src={img} className="icon" />
-    </div>
     <div className="parent">
       <div className="dias">
         <span className="monoton">Faltan </span> <span className="number"> {dias} </span><span className="monoton"> Días</span>
@@ -39,8 +35,23 @@ export default function Counter({ minutos, segundos, dias, horas }) {
         <div className="timeText">Segundos</div>
       </div>
     </div>
+    <div className="containerCartel">
+      <div className="cartel">
+        <div style={{ color: '#FF618E', textShadow: '0px 0px 5px black', fontSize: '25px', height: 'auto' }}>{day}</div>
+        <div style={{ color: '#FF618E', textShadow: '0px 0px 5px black', fontSize: '33px', height: 'auto' }}>MIRANDA!</div>
+        <div style={{ color: '#FF618E', textShadow: '0px 0px 5px black', fontSize: '20px', height: 'auto' }}>{place}</div>
+      </div>
+    </div>
+    <div className="containerDisc">
+      <div className="disco">
+        <img src={vinilo} className="vinilo" />
+        <img src={img} className="icon" />
+      </div>
+    </div>
 
-
+<div className="btnContainer">
+  <button className="btn">INGRESAR AL HOTEL</button>
+  </div>
   </>
   );
 }
